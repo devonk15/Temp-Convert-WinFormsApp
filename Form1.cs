@@ -36,7 +36,18 @@ namespace WinFormsApp1
 
                 e.Handled = true;
             }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                close();
+            }
         }
+
+        private void close()
+        {
+            this.Close();
+        }
+
         private void sub1_Click(object sender, EventArgs e)
         {
             Start();
@@ -227,7 +238,7 @@ namespace WinFormsApp1
             {
                 double v = ans3 + 273.15;
                 double vFin = Math.Round(v);
-                para3.Text = $"The temperature from Celsius to Fahrenheit is: {vFin}";
+                para3.Text = $"The temperature from Celsius to Kelvin is: {vFin}";
             }
         }
         private void ConvFtoC()
@@ -238,7 +249,7 @@ namespace WinFormsApp1
             {
                 double v = (ans3 - 32) / 1.8;
                 double vFin = Math.Round(v);
-                para3.Text = $"The temperature from Celsius to Fahrenheit is: {vFin}";
+                para3.Text = $"The temperature from Fahrenheit to Celsius is: {vFin}";
             }
         }
         private void ConvFtoK()
@@ -249,7 +260,7 @@ namespace WinFormsApp1
             {
                 double v = (ans3 - 32) * 5/9 + 273.15;
                 double vFin = Math.Round(v);
-                para3.Text = $"The temperature from Celsius to Fahrenheit is: {vFin}";
+                para3.Text = $"The temperature from Fahrenheit to Kelvin is: {vFin}";
             }
         }
         private void ConvKtoC()
@@ -260,7 +271,7 @@ namespace WinFormsApp1
             {
                 double v = ans3 - 273.15;
                 double vFin = Math.Round(v);
-                para3.Text = $"The temperature from Celsius to Fahrenheit is: {vFin}";
+                para3.Text = $"The temperature from Kelvin to Celsius is: {vFin}";
             }
         }
         private void ConvKtoF()
@@ -271,7 +282,7 @@ namespace WinFormsApp1
             {
                 double v = (ans3 - 273.15) * 9/5 + 32;
                 double vFin = Math.Round(v);
-                para3.Text = $"The temperature from Celsius to Fahrenheit is: {vFin}";
+                para3.Text = $"The temperature from Kelvin to Fahrenheit is: {vFin}";
             }
         }
 
